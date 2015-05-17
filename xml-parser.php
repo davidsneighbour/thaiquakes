@@ -4,7 +4,7 @@ $data = file_get_contents('http://www.tmd.go.th/en/xml/earthquake_eng.php');
 
 $xml = simplexml_load_string($data, null, LIBXML_NOCDATA);
 
-$results = json_decode(file_get_contents('data.json'));
+$results = json_decode(file_get_contents(__DIR__ . '/data.json'));
 
 if (count($results)>0){
   foreach ($results as $key => $value){
@@ -70,7 +70,7 @@ foreach ($results as $key => $row){
   $timestamps[$key] = $row['timestamp'];
 }
 array_multisort($timestamps, SORT_DESC, $results);
-file_put_contents('data.json', json_encode($results));
+file_put_contents(__DIR__ . '/data.json', json_encode($results));
 
 function prepareStringLatLng($string){
   $parts = explode(' ', trim($string));
