@@ -72,8 +72,6 @@ foreach ($results as $key => $row){
 array_multisort($timestamps, SORT_DESC, $results);
 file_put_contents('data.json', json_encode($results));
 
-var_dump($results);
-
 function prepareStringLatLng($string){
   $parts = explode(' ', trim($string));
   $value = DMStoDEC(intval($parts[0]), intval($parts[1]), intval($parts[2]));
