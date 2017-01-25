@@ -14,8 +14,8 @@ namespace Boka10;
  * @category Core
  * @package  Boka
  * @author   Patrick Kollitsch <patrick@davids-neighbour.com>
- * @license  http://davids-neighbour.com Proprietary
- * @link     http://inkohsamui.com
+ * @license  GPL-3.0
+ * @link     https://davids-neighbour.com
  * @since    6.1.0
  */
 class Database {
@@ -54,58 +54,6 @@ class Database {
             self::$instance->cacheSecs = 30;
         }
         return self::$instance;
-    }
-
-    /**
-     * Checks if the table requested has a deleted indicator.
-     *
-     * @param string $table tablename to check
-     *
-     * @return bool has the table requested a `is_deleted` column
-     */
-    public static function hasDeleteColumn($table) {
-        return self::hasColumn($table, 'is_deleted');
-    }
-
-    /**
-     * Checks if the table requested has the requested column.
-     *
-     * @param string $table tablename to check
-     * @param string $column columnname to check
-     *
-     * @return bool has the table requested column with the name requested
-     */
-    public static function hasColumn($table, $column) {
-
-        $database = \Boka10\Database::getInstance();
-        // check if colum `is_deleted` exists
-        $sql = "SHOW COLUMNS FROM `" . $table . "` LIKE '" . $column . "'";
-        $column_exists = $database->GetAll($sql);
-
-        return (count($column_exists) > 0) ? true : false;
-    }
-
-    /**
-     * Returns next autoincrement id for add-forms
-     *
-     * @return int next autoincrement id for the current main table
-     * @todo check what to do when there is no autoincrement table
-     */
-    public function getNextId() {
-        $database = \Boka10\Database::getInstance();
-        $autoincrementColumn = $database->GetOne("
-            SELECT `column_name`
-            FROM INFORMATION_SCHEMA.COLUMNS
-            WHERE
-                `table_name` = '" . static::MAINTABLE . "' AND
-                `extra` = 'auto_increment'
-            LIMIT 0,1
-        ");
-        $next = $database->GetOne("
-            SELECT MAX($autoincrementColumn)+1
-            FROM " . static::MAINTABLE . "
-        ");
-        return $next;
     }
 
 }
