@@ -1,0 +1,14 @@
+{
+    "name": "dnb/thai-quake-parser",
+    "type": "project",
+    "require": {
+        "adodb/adodb-php": "^5.20"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Patrick Kollitsch",
+            "email": "patrick@davids-neighbour.com"
+        }
+    ]
+}
