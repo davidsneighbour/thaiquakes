@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<root>
+    <key name="$schema">http://json-schema.org/draft-07/schema</key>
+    <key name="$id">http://example.com/example.json</key>
+    <type>array</type>
+    <title>The root schema</title>
+    <description>The root schema comprises the entire JSON document.</description>
+    <default/>
+    <examples>
+        <item>
+            <item>
+                <timestamp>1431802560</timestamp>
+                <magnitude>1.8</magnitude>
+                <origin>Amphoe Phrao,Chiang Mai</origin>
+                <latitude>19.1525</latitude>
+                <longitude>99.1525</longitude>
+            </item>
+            <item>
+                <timestamp>1431828240</timestamp>
+                <magnitude>3.5</magnitude>
+                <origin>Myanmar</origin>
+                <latitude>18.067777777778</latitude>
+                <longitude>96.4575</longitude>
+            </item>
+        </item>
+    </examples>
+    <additionalItems>True</additionalItems>
+    <items>
+        <key name="$id">#/items</key>
+        <anyOf>
+            <item>
+                <key name="$id">#/items/anyOf/0</key>
+                <type>object</type>
+                <title>The first anyOf schema</title>
+                <description>An explanation about the purpose of this instance.</description>
+                <default/>
+                <examples>
+                    <item>
+                        <timestamp>1431802560</timestamp>
+                        <magnitude>1.8</magnitude>
+                        <origin>Amphoe Phrao,Chiang Mai</origin>
+                        <latitude>19.1525</latitude>
+                        <longitude>99.1525</longitude>
+                    </item>
+                </examples>
+                <required>
+                    <item>timestamp</item>
+                    <item>magnitude</item>
+                    <item>origin</item>
+                    <item>latitude</item>
+                    <item>longitude</item>
+                </required>
+                <properties>
+                    <timestamp>
+                        <key name="$id">#/items/anyOf/0/properties/timestamp</key>
+                        <type>string</type>
+                        <title>The timestamp schema</title>
+                        <description>An explanation about the purpose of this instance.</description>
+                        <default/>
+                        <examples>
+                            <item>1431802560</item>
+                        </examples>
+                    </timestamp>
+                    <magnitude>
+                        <key name="$id">#/items/anyOf/0/properties/magnitude</key>
+                        <type>string</type>
+                        <title>The magnitude schema</title>
+                        <description>An explanation about the purpose of this instance.</description>
+                        <default/>
+                        <examples>
+                            <item>1.8</item>
+                        </examples>
+                    </magnitude>
+                    <origin>
+                        <key name="$id">#/items/anyOf/0/properties/origin</key>
+                        <type>string</type>
+                        <title>The origin schema</title>
+                        <description>An explanation about the purpose of this instance.</description>
+                        <default/>
+                        <examples>
+                            <item>Amphoe Phrao,Chiang Mai</item>
+                        </examples>
+                    </origin>
+                    <latitude>
+                        <key name="$id">#/items/anyOf/0/properties/latitude</key>
+                        <type>string</type>
+                        <title>The latitude schema</title>
+                        <description>An explanation about the purpose of this instance.</description>
+                        <default/>
+                        <examples>
+                            <item>19.1525</item>
+                        </examples>
+                    </latitude>
+                    <longitude>
+                        <key name="$id">#/items/anyOf/0/properties/longitude</key>
+                        <type>string</type>
+                        <title>The longitude schema</title>
+                        <description>An explanation about the purpose of this instance.</description>
+                        <default/>
+                        <examples>
+                            <item>99.1525</item>
+                        </examples>
+                    </longitude>
+                </properties>
+                <additionalProperties>True</additionalProperties>
+            </item>
+        </anyOf>
+    </items>
+</root>

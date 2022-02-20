@@ -1,0 +1,80 @@
+$id: http://example.com/example.json
+$schema: http://json-schema.org/draft-07/schema
+additionalItems: true
+default: []
+description: The root schema comprises the entire JSON document.
+examples:
+-   -   latitude: '19.1525'
+        longitude: '99.1525'
+        magnitude: '1.8'
+        origin: Amphoe Phrao,Chiang Mai
+        timestamp: '1431802560'
+    -   latitude: '18.067777777778'
+        longitude: '96.4575'
+        magnitude: '3.5'
+        origin: Myanmar
+        timestamp: '1431828240'
+items:
+    $id: '#/items'
+    anyOf:
+    -   $id: '#/items/anyOf/0'
+        additionalProperties: true
+        default: {}
+        description: An explanation about the purpose of this instance.
+        examples:
+        -   latitude: '19.1525'
+            longitude: '99.1525'
+            magnitude: '1.8'
+            origin: Amphoe Phrao,Chiang Mai
+            timestamp: '1431802560'
+        properties:
+            latitude:
+                $id: '#/items/anyOf/0/properties/latitude'
+                default: ''
+                description: An explanation about the purpose of this instance.
+                examples:
+                - '19.1525'
+                title: The latitude schema
+                type: string
+            longitude:
+                $id: '#/items/anyOf/0/properties/longitude'
+                default: ''
+                description: An explanation about the purpose of this instance.
+                examples:
+                - '99.1525'
+                title: The longitude schema
+                type: string
+            magnitude:
+                $id: '#/items/anyOf/0/properties/magnitude'
+                default: ''
+                description: An explanation about the purpose of this instance.
+                examples:
+                - '1.8'
+                title: The magnitude schema
+                type: string
+            origin:
+                $id: '#/items/anyOf/0/properties/origin'
+                default: ''
+                description: An explanation about the purpose of this instance.
+                examples:
+                - Amphoe Phrao,Chiang Mai
+                title: The origin schema
+                type: string
+            timestamp:
+                $id: '#/items/anyOf/0/properties/timestamp'
+                default: ''
+                description: An explanation about the purpose of this instance.
+                examples:
+                - '1431802560'
+                title: The timestamp schema
+                type: string
+        required:
+        - timestamp
+        - magnitude
+        - origin
+        - latitude
+        - longitude
+        title: The first anyOf schema
+        type: object
+title: The root schema
+type: array
