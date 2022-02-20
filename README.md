@@ -1,10 +1,23 @@
-# quakes
-A simple xml parser for the Thai Weather Departments quirky quake xml feed.
+# ThaiQuakes
 
-# why
-The Thai Meterological Department offers a xml feed of recent earth quakes in the region. You can find this feed at http://www.tmd.go.th/en/xml/earthquake_eng.php. Problem with this feed is, that the main information is inside of items encoded as HTML inside of a CDATA tag, Latitude and Longitude encoded as degree, minutes, second, time in no standardized way, aso. - which makes it basically impossible to use the feed in any automatic processes.
+A simple parser and historical data collection for the Thai Weather Department's quirky quake XML feed.
 
-The script provided in this repository is parsing the data into an array and saving it as JSON. It's provided as is. Improvements are welcome.
+## Why
 
-# how to
-run `php xml-parser.php`, it will create a file data.json with the data. if the file data.json already exists it will be included on future runs - thus creating a big long json file with quake data. i guess it would make sense to run this script as a cronjob, the original file seems to hold only three recent items.
+The [Thai Meterological Department](https://www.tmd.go.th/en/) offers a XML feed of recent earth quakes in the region. You can find this feed at [http://www.tmd.go.th/en/xml/earthquake_eng.php]. The problem with this feed is, that the main information is inside of items encoded as HTML inside of a CDATA tag, Latitude and Longitude encoded as degree, minutes, second, time in no standardized way, etc. - which makes it impossible to parse the data useful and fast.
+
+The scripts provided in this repository are parsing the data into an array and save it as JSON.
+
+## How To
+
+To be written...
+
+## Features
+
+- :heavy_check_mark: Parsing and saving data
+- :x: Github workflows to automatically collect data
+- :x: graphic display on a map
+
+## History
+
+This project originated in [a PHP version](https://github.com/davidsneighbour/thaiquakes/tree/php/old0) that I wrote in 2015 and that run since then un-monitored on my server. It worked, but didn't really collect data and was also outdated, which is why I started working on this new Node based version.
