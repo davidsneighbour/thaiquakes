@@ -12,6 +12,8 @@ The scripts provided in this repository are parsing the data into an array and s
 
 To be written...
 
+This is work in progress. For a working PHP version check the [old PHP version](https://github.com/davidsneighbour/thaiquakes/tree/php/old).
+
 ## Features
 
 - :heavy_check_mark: Parsing and saving data
@@ -20,4 +22,4 @@ To be written...
 
 ## History
 
-This project originated in [a PHP version](https://github.com/davidsneighbour/thaiquakes/tree/php/old0) that I wrote in 2015 and that run since then un-monitored on my server. It worked, but didn't really collect data and was also outdated, which is why I started working on this new Node based version.
+This project originated in [a PHP version](https://github.com/davidsneighbour/thaiquakes/tree/php/old) that I wrote in 2015 and that run since then un-monitored on my server. It worked, but didn't really collect data and was also outdated, which is why I started working on this new Node based version.

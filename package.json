@@ -1,19 +1,25 @@
 {
   "name": "@dnb/thaiquakes",
   "version": "1.0.0",
-  "description": "A simple parser for the Thai Weather Departments quirky quake xml feed.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": "davidsneighbour/thaiquakes",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "license": "MIT",
-  "bugs": "https://github.com/davidsneighbour/thaiquakes/issues",
+  "description": "A simple parser for the Thai Weather Departments quirky quake xml feed.",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/davidsneighbour/thaiquakes#readme",
+  "repository": "davidsneighbour/thaiquakes",
+  "bugs": "https://github.com/davidsneighbour/thaiquakes/issues",
   "dependencies": {
     "@dnb-org/eslint-config": "^3.5.8",
     "@dnb-org/standard-version-config": "^3.5.6",
     "@dnb-org/tools": "^3.5.6"
-  }
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.18"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "extends": "@dnb-org/eslint-config"
+  },
+  "main": "index.js"
 }
