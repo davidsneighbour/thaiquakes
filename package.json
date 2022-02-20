@@ -1,6 +1,6 @@
 {
   "name": "@dnb/thaiquakes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "A simple parser for the Thai Weather Departments quirky quake xml feed.",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
