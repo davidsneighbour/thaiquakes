@@ -1,9 +1,7 @@
 <?php
 
-define('ROOTDIR', dirname(__FILE__));
-
-require_once(ROOTDIR . '/setup.php');
-require_once(ROOTDIR . '/initialize.php');
+require_once(__DIR__ . '/setup.php');
+require_once(__DIR__ . '/initialize.php');
 
 $data = file_get_contents('http://www.tmd.go.th/en/xml/earthquake_eng.php');
 $xml = simplexml_load_string($data, null, LIBXML_NOCDATA);
@@ -68,19 +66,3 @@ function prepareStringLatLng($string) {
 function DMStoDEC($deg, $min, $sec) {
     return $deg + ((($min * 60) + ($sec)) / 3600);
 }
-
-/**
- * create sendgrid setup
- * @see https://github.com/sendgrid/sendgrid-php
- */
-//$from = new SendGrid\Email(null, FROMADDRESS);
-//$subject = "Script executed";
-//$to = new SendGrid\Email(null, TOADDRESS);
-//$content = new SendGrid\Content("text/plain", "Hello, Email!");
-//$mail = new SendGrid\Mail($from, $subject, $to, $content);
-//$sg = new \SendGrid(SENDGRIDKEY);
-//
-//$response = $sg->client->mail()->send()->post($mail);
-//echo "status code: " . $response->statusCode() . N;
-//Kint::dump($response->headers());
-//echo N . N . $response->body();

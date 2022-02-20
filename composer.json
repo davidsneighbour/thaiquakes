@@ -2,9 +2,7 @@
     "name": "dnb/thai-quake-parser",
     "type": "project",
     "require": {
-        "adodb/adodb-php": "^5.20",
-        "raveren/kint": "^1.0",
-        "sendgrid/sendgrid": "~5.1"
+        "adodb/adodb-php": "^5.20"
     },
     "license": "GPL-3.0",
     "authors": [
