@@ -8,7 +8,7 @@
   "repository": "davidsneighbour/thaiquakes",
   "bugs": "https://github.com/davidsneighbour/thaiquakes/issues",
   "dependencies": {
-    "@dnb-org/eslint-config": "^3.5.8",
+    "@dnb-org/eslint-config": "^3.5.10",
     "@dnb-org/standard-version-config": "^3.5.6",
     "@dnb-org/tools": "^3.5.6"
   },
