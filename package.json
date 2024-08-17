@@ -1,5 +1,5 @@
 {
-  "name": "@dnb/thaiquakes",
+  "name": "@davidsneighbour/thaiquakes",
   "version": "1.0.2",
   "license": "MIT",
   "description": "A simple parser for the Thai Weather Departments quirky quake xml feed.",
@@ -8,13 +8,12 @@
   "repository": "davidsneighbour/thaiquakes",
   "bugs": "https://github.com/davidsneighbour/thaiquakes/issues",
   "dependencies": {
-    "@dnb-org/eslint-config": "^3.5.8",
-    "@dnb-org/standard-version-config": "^3.5.6",
-    "@dnb-org/tools": "^3.5.6",
+    "@davidsneighbour/eslint-config": "^3.5.8",
+    "@davidsneighbour/release-config": "^3.5.6",
     "express-xml-bodyparser": "^0.3.0"
   },
   "devDependencies": {
-    "@types/node": "^20.12.13"
+    "@types/node": "^22.4.0"
   },
   "scripts": {
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
@@ -23,7 +22,7 @@
     "update": "npm-check-updates -u && npm install && fixpack && npx browserslist@latest --update-db"
   },
   "eslintConfig": {
-    "extends": "@dnb-org/eslint-config"
+    "extends": "@davidsneighbour/eslint-config"
   },
   "main": "index.js"
 }
