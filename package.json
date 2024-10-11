@@ -8,7 +8,7 @@
   "repository": "davidsneighbour/thaiquakes",
   "bugs": "https://github.com/davidsneighbour/thaiquakes/issues",
   "dependencies": {
-    "@davidsneighbour/eslint-config": "^2024.3.34",
+    "@davidsneighbour/eslint-config": "^2024.4.3",
     "@davidsneighbour/release-config": "^2024.3.38",
     "express-xml-bodyparser": "^0.3.0"
   },
