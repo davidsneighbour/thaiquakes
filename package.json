@@ -13,7 +13,7 @@
     "express-xml-bodyparser": "^0.3.0"
   },
   "devDependencies": {
-    "@types/node": "^22.5.0"
+    "@types/node": "^22.7.9"
   },
   "scripts": {
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
